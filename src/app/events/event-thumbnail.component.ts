@@ -8,9 +8,15 @@ import { Component, Input, EventEmitter, Output } from '@angular/core';
 export class EventThumbnailComponent {
   @Input() public event: any;
   @Output() public eventClick = new EventEmitter();
-  public someProperty: any = "Some value printed using template variables";
+  public someProperty: any = 'Some value printed using template variables';
 
   handleClickMe(): void {
     this.eventClick.emit(this.event.name);
+  }
+
+  getStartTimeClass() {
+    const isEarlyStart = this.event && this.event.time === '8:00 am';
+
+    return { bold: isEarlyStart, green: isEarlyStart };
   }
 }
