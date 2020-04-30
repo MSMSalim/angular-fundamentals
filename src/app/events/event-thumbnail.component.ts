@@ -13,8 +13,4 @@ export class EventThumbnailComponent {
   handleClickMe(): void {
     this.eventClick.emit(this.event.name);
   }
-
-  logFoo(): void {
-    console.log('foo');
-  }
 }
