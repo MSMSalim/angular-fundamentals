@@ -1,7 +1,9 @@
 <div>
   <h1>Upcoming Angular Events</h1>
   <hr />
-  <div class="well hoverwell thumbnnail">
+  <div class="well hoverwell thumbnnail" 
+       [routerLink]= "['/events', event.id]">
+
     <h2>{{ event.name }}</h2>
     <div>Date: {{ event.date }}</div>
 
