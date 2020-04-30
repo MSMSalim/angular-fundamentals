@@ -8,8 +8,13 @@ import { Component, Input, EventEmitter, Output } from '@angular/core';
 export class EventThumbnailComponent {
   @Input() public event: any;
   @Output() public eventClick = new EventEmitter();
+  public someProperty: any = "Some value printed using template variables";
 
   handleClickMe(): void {
     this.eventClick.emit(this.event.name);
+  }
+
+  logFoo(): void {
+    console.log('foo');
   }
 }
