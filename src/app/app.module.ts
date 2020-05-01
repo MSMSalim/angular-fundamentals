@@ -1,21 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
 import { EventsAppComponent } from './events-app.component';
-import { EventsListComponent } from './events/events-list.component';
-import { EventThumbnailComponent } from './events/event-thumbnail.component';
 import { NavbarComponent } from './nav/navbar.component';
-import { EventDetailsComponent } from './events/event-details/event-details.component';
-
-import {appRoutes} from '../routes';
-import { CreateEventComponent } from './events/create-event.component';
+import { appRoutes } from '../routes';
 import { PageNotFoundComponent } from './errors/page-not-found.component';
 
+import {
+  EventsListComponent,
+  EventThumbnailComponent,
+  EventDetailsComponent,
+  CreateEventComponent,
+} from './events/index';
+
 @NgModule({
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(appRoutes)],
+  imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
   declarations: [
     EventsAppComponent,
     EventsListComponent,
