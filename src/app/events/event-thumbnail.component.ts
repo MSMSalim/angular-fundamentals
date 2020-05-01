@@ -1,4 +1,5 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { IEvent } from './shared/index';
 
 @Component({
   selector: 'event-thumbnail',
@@ -6,7 +7,7 @@ import { Component, Input, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./event-thumbnail.component.css'],
 })
 export class EventThumbnailComponent {
-  @Input() public event: any;
+  @Input() public event: IEvent;
   @Output() public eventClick = new EventEmitter();
   public someProperty: any = 'Some value printed using template variables';
 
