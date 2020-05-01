@@ -26,9 +26,13 @@ export class ProfileComponent implements OnInit {
 
     this.firstName = new FormControl(
       currentUser.firstName,
+      [Validators.required, Validators.pattern('[a-zA-Z].*')]
+    );
+
+    this.lastName = new FormControl(
+      currentUser.lastName, 
       Validators.required
     );
-    this.lastName = new FormControl(currentUser.lastName, Validators.required);
 
     this.profileForm = new FormGroup({
       firstName: this.firstName,
