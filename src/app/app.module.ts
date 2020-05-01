@@ -11,6 +11,7 @@ import {
   EventThumbnailComponent,
   EventDetailsComponent,
   CreateEventComponent,
+  SessionListComponent
 } from './events/index';
 
 @NgModule({
@@ -23,6 +24,7 @@ import {
     EventDetailsComponent,
     CreateEventComponent,
     PageNotFoundComponent,
+    SessionListComponent,
   ],
   bootstrap: [EventsAppComponent],
 })
