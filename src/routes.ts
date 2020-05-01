@@ -6,6 +6,7 @@ import { PageNotFoundComponent } from './app/errors/page-not-found.component';
 import { EventRouteActivator } from './app/events/event-details/event-route-activator.service';
 import { CreateEventRouteDeactivator } from './app/events/create-event-route-deactivate.service';
 import { EventListResolver } from './app/events/events-list-resolver.service';
+import { UserModule } from './app/user/user.module';
 
 export const appRoutes: Routes = [
   {
@@ -25,4 +26,5 @@ export const appRoutes: Routes = [
   },
   { path: '404', component: PageNotFoundComponent },
   { path: '', redirectTo: '/events', pathMatch: 'full' },
+  { path: 'user', loadChildren: './user/user.module#UserModule'}
 ];
