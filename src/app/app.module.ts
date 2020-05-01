@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 import { EventsAppComponent } from './events-app.component';
 import { EventsListComponent } from './events/events-list.component';
@@ -10,6 +10,7 @@ import { EventDetailsComponent } from './events/event-details/event-details.comp
 
 import {appRoutes} from '../routes';
 import { CreateEventComponent } from './events/create-event.component';
+import { PageNotFoundComponent } from './errors/page-not-found.component';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { CreateEventComponent } from './events/create-event.component';
     NavbarComponent,
     EventDetailsComponent,
     CreateEventComponent,
+    PageNotFoundComponent,
   ],
   bootstrap: [EventsAppComponent],
 })
