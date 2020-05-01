@@ -5,6 +5,7 @@ import { IUser } from './user.model';
   providedIn: 'root',
 })
 export class AuthService {
+ 
   public currentUser: IUser;
 
   public loginUser(userName: string, password: string) {
@@ -22,5 +23,10 @@ export class AuthService {
 
   public getCurrentUser(): IUser {
     return this.currentUser;
+  }
+
+  updateCurrentUser(firstName: string, lastName: string) {
+    this.currentUser.firstName = firstName;
+    this.currentUser.lastName = lastName;
   }
 }
