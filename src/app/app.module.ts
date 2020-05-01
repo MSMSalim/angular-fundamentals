@@ -14,6 +14,8 @@ import {
   SessionListComponent
 } from './events/index';
 
+import { CollapsibleWellComponent } from './common/collapsible-well.component';
+
 @NgModule({
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
   declarations: [
@@ -25,6 +27,7 @@ import {
     CreateEventComponent,
     PageNotFoundComponent,
     SessionListComponent,
+    CollapsibleWellComponent,
   ],
   bootstrap: [EventsAppComponent],
 })
