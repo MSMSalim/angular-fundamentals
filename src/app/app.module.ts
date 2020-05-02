@@ -11,7 +11,8 @@ import {
   EventThumbnailComponent,
   EventDetailsComponent,
   CreateEventComponent,
-  SessionListComponent
+  SessionListComponent,
+  DurationPipe
 } from './events/index';
 
 import { CollapsibleWellComponent } from './common/collapsible-well.component';
@@ -28,6 +29,7 @@ import { CollapsibleWellComponent } from './common/collapsible-well.component';
     PageNotFoundComponent,
     SessionListComponent,
     CollapsibleWellComponent,
+    DurationPipe
   ],
   bootstrap: [EventsAppComponent],
 })

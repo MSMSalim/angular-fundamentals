@@ -5,3 +5,4 @@ export * from './events-list.component';
 export * from './shared/index';
 export * from './event-details/index';
 export * from './create-event-route-deactivate.service';
+export * from './shared/duration.pipe';
