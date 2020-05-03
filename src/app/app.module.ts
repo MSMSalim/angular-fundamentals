@@ -12,10 +12,13 @@ import {
   EventDetailsComponent,
   CreateEventComponent,
   SessionListComponent,
-  DurationPipe
+  DurationPipe,
 } from './events/index';
 
 import { CollapsibleWellComponent } from './common/collapsible-well.component';
+import { TOASTR_TOKEN, Toastr } from './common/toastr.service';
+
+declare let toastr: Toastr;
 
 @NgModule({
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
@@ -29,8 +32,9 @@ import { CollapsibleWellComponent } from './common/collapsible-well.component';
     PageNotFoundComponent,
     SessionListComponent,
     CollapsibleWellComponent,
-    DurationPipe
+    DurationPipe,
   ],
   bootstrap: [EventsAppComponent],
+  providers: [{ provide: TOASTR_TOKEN, useValue: toastr }],
 })
 export class AppModule {}
