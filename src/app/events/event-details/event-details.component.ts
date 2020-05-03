@@ -10,7 +10,8 @@ import { IEvent } from '../shared';
 })
 export class EventDetailsComponent implements OnInit {
   public event: IEvent;
-  filterBy: string = 'all';
+  public filterBy: string = 'all';
+  public sortBy: string = 'name';
 
   constructor(private eventService: EventService, 
     private route: ActivatedRoute) {}
