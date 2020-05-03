@@ -17,9 +17,10 @@ import {
 
 import { CollapsibleWellComponent } from './common/collapsible-well.component';
 import { TOASTR_TOKEN } from './common/toastr.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
+  imports: [BrowserModule, RouterModule.forRoot(appRoutes), FormsModule],
   declarations: [
     EventsAppComponent,
     EventsListComponent,
