@@ -16,8 +16,12 @@ import {
 } from './events/index';
 
 import { CollapsibleWellComponent } from './common/collapsible-well.component';
-import { TOASTR_TOKEN } from './common/toastr.service';
+import { SimpleModalComponent } from './common/simple-modal.component';
 import { FormsModule } from '@angular/forms';
+import { JQ_TOKEN } from './common/jQuery.service';
+import { ModalTriggerDirective } from './common/modal-trigger.directive';
+
+let jQuery = window['$'];
 
 @NgModule({
   imports: [BrowserModule, RouterModule.forRoot(appRoutes), FormsModule],
@@ -32,7 +36,10 @@ import { FormsModule } from '@angular/forms';
     SessionListComponent,
     CollapsibleWellComponent,
     DurationPipe,
+    SimpleModalComponent,
+    ModalTriggerDirective,
   ],
-  bootstrap: [EventsAppComponent]
+  bootstrap: [EventsAppComponent],
+  providers: [{ provide: JQ_TOKEN, useValue: jQuery }],
 })
 export class AppModule {}

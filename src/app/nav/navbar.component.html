@@ -63,10 +63,22 @@
             id="searchTerm"
           />
         </div>
-        <button class="btn btn-default">
+        <button class="btn btn-default" modal-trigger>
           Search
         </button>
       </form>
     </div>
   </div>
 </div>
+
+<simple-modal title="Matching Sessions">
+  <div class="list-group">
+    <a
+      class="list-group-item"
+      *ngFor="let session of foundSession"
+      [routerLink]="['/events', session.eventId]"
+    >
+      {{ session.name }}
+    </a>
+  </div>
+</simple-modal>

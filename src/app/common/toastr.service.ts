@@ -1,10 +1,9 @@
 import { InjectionToken } from '@angular/core';
 
-declare let toastr: Toastr;
-
 export let TOASTR_TOKEN = new InjectionToken<Toastr>('toastr', {
   providedIn: 'root',
   factory: () => {
+    let toastr: Toastr = window['toastr'];
     return toastr;
   },
 });
